@@ -11,6 +11,14 @@ namespace CanteenManagementSystem.Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            // Checks if author came here is Admin or not
+            Response.Cache.SetNoStore();
+            if (Session["email"] == null || !String.Equals(Session["role"], "Admin"))
+            {
+                Response.Redirect("~/");
+            }
+
+            // Collect data from database and paste it on page on page_Load
 
         }
     }

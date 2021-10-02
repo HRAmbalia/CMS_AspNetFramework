@@ -170,12 +170,17 @@
     <Content Include="Admin\Default.aspx" />
     <Content Include="Admin\RegisterStaff.aspx" />
     <Content Include="Admin\StaffStatus.aspx" />
+    <Content Include="App_Data\CmsDb_AspForms.mdf" />
+    <Content Include="App_Data\CmsDb_AspForms_log.ldf">
+      <DependentUpon>CmsDb_AspForms.mdf</DependentUpon>
+    </Content>
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
+    <Content Include="CustomerInfo.aspx" />
     <Content Include="Default.aspx" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
@@ -388,6 +393,13 @@
     <Compile Include="Contact.aspx.designer.cs">
       <DependentUpon>Contact.aspx</DependentUpon>
     </Compile>
+    <Compile Include="CustomerInfo.aspx.cs">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="CustomerInfo.aspx.designer.cs">
+      <DependentUpon>CustomerInfo.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -459,8 +471,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
-    <Folder Include="Images\" />
+    <Folder Include="Images\Menu\" />
+    <Folder Include="Images\Staff\" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

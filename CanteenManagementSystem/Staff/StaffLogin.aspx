@@ -98,34 +98,35 @@
                             <div class="form-group">
                                 <asp:Label runat="server" AssociatedControlID="txtEmail" CssClass="col-md-2 control-label">Email :</asp:Label>
                                 <div class="col-md-10">
-                                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" TextMode="Email" />
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail" CssClass="text-danger" ErrorMessage="The email field is required." />
+                                    <asp:TextBox runat="server" ID="txtEmail" CssClass="form-control" TextMode="Email" ValidationGroup="lgn" />
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtEmail" CssClass="text-danger" ErrorMessage="The email field is required." ValidationGroup="lgn" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label runat="server" AssociatedControlID="txtPassword" CssClass="col-md-2 control-label">Password :</asp:Label>
                                 <div class="col-md-10">
-                                    <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="form-control" />
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" CssClass="text-danger" ErrorMessage="The password field is required." />
+                                    <asp:TextBox runat="server" ID="txtPassword" TextMode="Password" CssClass="form-control" ValidationGroup="lgn" />
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="txtPassword" CssClass="text-danger" ErrorMessage="The password field is required." ValidationGroup="lgn" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <asp:Label runat="server" AssociatedControlID="ddlLoginAs" CssClass="col-md-2 control-label">Login As :</asp:Label>
                                 <div class="col-md-10">
-                                    <asp:DropDownList ID="ddlLoginAs" runat="server" CssClass="auto-style1" Width="280px">
-                                        <asp:ListItem>Staff</asp:ListItem>
-                                        <asp:ListItem>Admin</asp:ListItem>
+                                    <asp:DropDownList ID="ddlLoginAs" runat="server" CssClass="auto-style1" Width="280px" ValidationGroup="lgn">
+                                        <asp:ListItem Value="Staff">Staff</asp:ListItem>
+                                        <asp:ListItem Value="Admin">Admin</asp:ListItem>
                                     </asp:DropDownList>
-                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlLoginAs" CssClass="text-danger" ErrorMessage="The password field is required." />
+                                    <asp:RequiredFieldValidator runat="server" ControlToValidate="ddlLoginAs" CssClass="text-danger" ErrorMessage="The password field is required." ValidationGroup="lgn" />
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-md-offset-2 col-md-10">
                                     <%--<asp:Button runat="server" OnClick="LogIn" Text="Log in" CssClass="btn btn-default" />--%>
-                                    <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" />
+                                    <asp:Button runat="server" Text="Log in" CssClass="btn btn-default" ID="btnLogin" OnClick="btnLogin_Click" ValidationGroup="lgn" />
                                 </div>
                             </div>
-                            To register as Staff <asp:HyperLink ID="HlContact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink> Us.
+                            To register as Staff <asp:HyperLink ID="HlContact" runat="server" NavigateUrl="~/Contact.aspx">Contact</asp:HyperLink> Us. <br />
+                            <asp:Label ID="loginStatus" runat="server"></asp:Label>
                         </div>
                     </div>
                 </div>

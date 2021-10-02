@@ -59,6 +59,7 @@
                         <li><a runat="server" href="~/Admin/RegisterStaff">Register Staff</a></li>
                         <li><a runat="server" href="~/Admin/StaffStatus">Staff Status</a></li>
                         <li><a runat="server" href="~/Admin/CustomerStatus">Customer Status</a></li>
+                        <li><button id="btnLogout" runat="server" class="m-3 btn btn-danger" onserverclick="btnLogout_ServerClick">Logout</button></li>
                         <%-- ADD LINKS HERE (will be shown for loggedIn Admin) --%>
                     </ul>
                 </div>

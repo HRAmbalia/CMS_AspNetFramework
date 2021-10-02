@@ -11,7 +11,11 @@ namespace CanteenManagementSystem.Staff
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            Response.Cache.SetNoStore();
+            if (Session["email"] == null || !String.Equals(Session["role"], "Staff"))
+            {
+                Response.Redirect("~/");
+            }
         }
     }
 }

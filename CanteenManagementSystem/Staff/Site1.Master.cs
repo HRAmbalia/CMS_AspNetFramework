@@ -13,5 +13,14 @@ namespace CanteenManagementSystem.Staff
         {
 
         }
+
+        protected void btnLogout_ServerClick(object sender, EventArgs e)
+        {
+            Session["email"] = null;
+            Session["userID"] = null;
+            Session["role"] = null;
+            Session.Abandon();
+            Response.Redirect("~/");
+        }
     }
 }

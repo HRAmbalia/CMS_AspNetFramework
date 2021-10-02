@@ -62,6 +62,7 @@
                         <%-- And if validation goes wrong, will simply print wrong input on login screen and can't let user go into --%>
                         <li><a runat="server" href="~/Staff/MenuList">Menu</a></li>
                         <li><a runat="server" href="~/Staff/OrdersList">Order</a></li>
+                        <li><button id="btnLogout" runat="server" class="m-3 btn btn-danger" onserverclick="btnLogout_ServerClick">Logout</button></li>
                         <%-- ADD LINKS HERE (will be shown for loggedIn staff) --%>
                     </ul>
                 </div>

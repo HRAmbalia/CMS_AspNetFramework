@@ -35,6 +35,7 @@ namespace CanteenManagementSystem.Models
         }
 
         public static ApplicationDbContext Create()
+        
         {
             return new ApplicationDbContext();
         }
